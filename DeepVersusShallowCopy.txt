@@ -1,6 +1,0 @@
-Deep copy constructurs required when dynamci memory is used in a nobject
--must be written by developer
--requires constructor to perform initial allocation of dynamic memory
--requires destructure to free dynamic memory when object no longer used
--copy function copies all dynamically allocated memory
--requires overloaded assignment function
