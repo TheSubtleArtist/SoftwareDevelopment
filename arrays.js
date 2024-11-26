@@ -32,7 +32,3 @@ let twoDimArray = [ [1, 2, 3],["one", "two", "three"],["four", 4, "sticky"]];
 for (let a = 0; a <= twoDimArray.length; a ++) {
     console.log(`position ${a}: `, twoDimArray[a]);
 }
-
-for (let outer = 0; outer <= twoDimArray.length; outer ++) {
-        console.log(twoDimArray[outer][inner]);
-}
