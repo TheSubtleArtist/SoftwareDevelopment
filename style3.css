@@ -1,0 +1,26 @@
+
+body{
+    background-image:url("images/rias.jpg");
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-attachment:fixed;
+    background-color: lightblue;
+}
+span{
+    display:block
+}
+li{
+    display:inline-block;
+    width:100px;
+    height:100px;
+}
+nav{
+    visibility:hidden
+}
+#testicles{color:magenta; font-size:20px}
+.first{color:rgb(112, 216, 202); font-size:32px}
+.second{color:#44cc90; font-size:24px}
+.third{color:skyblue}
+.titty{font-size:38px}
+.inner{background-color:blue; color:red}
+.outer{background-image:url("images/JobSucks.jpg"); background-repeat:repeat-x; background-position:top left}
