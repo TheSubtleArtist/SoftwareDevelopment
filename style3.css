@@ -6,16 +6,19 @@ body{
     background-attachment:fixed;
     background-color: lightblue;
 }
+/*
 span{
-    display:block
+    display:inline-block
 }
+    */
 li{
     display:inline-block;
     width:100px;
     height:100px;
+    font-size: 2em;
 }
 nav{
-    visibility:hidden
+    visibility:visible
 }
 #testicles{color:magenta; font-size:20px}
 .first{color:rgb(112, 216, 202); font-size:32px}
@@ -24,3 +27,19 @@ nav{
 .titty{font-size:38px}
 .inner{background-color:blue; color:red}
 .outer{background-image:url("images/JobSucks.jpg"); background-repeat:repeat-x; background-position:top left}
+span.ingredient{
+    display:inline; 
+    color:red; 
+    background:yellow}
+.textLeft{
+    text-align: left;
+}
+.textJustify{
+    text-align:justify;
+}
+.textRight{
+    text-align:right;
+}
+.textCenter{
+    text-align:center;
+}
