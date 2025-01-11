@@ -9,29 +9,122 @@ header{
     text-align:center;
     vertical-align:middle;
 }
+
+h2{
+    color:#333;
+    margin-left:15px;
+    font-size:2em;
+}
 body{
     background-color: khaki;
+    font-family:monospace;
+    font-size:medium;
+
 }
+#info img{
+    max-width:90px;
+    max-height:91px;
+}
+#info h1{
+    font-size:3em;
+    text-transform:uppercase;
+
+}
+#info img, #img h1{
+    display:inline-block;
+}
+
+nav{
+    width:100%;
+    background-color:lightgray;
+}
+nav li{
+    text-transform:uppercase;
+    margin:auto;
+    display:inline;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+nav a{
+    text-decoration:none;
+    padding:5px;
+    font-size:1.5em;
+    color:black;
+
+}
+nav a:hover{
+    color:aqua;
+    border-bottom: solid 2px aqua;
+}
+
+#banner{
+    background-image:url("images/banner.jpg");
+    height:100px;
+}
+#bannerText{
+    bottom: 10%;
+    background-color:blue;
+    right:10%;
+    padding:15px;
+
+}
+
 .item{
     border: 2px solid blue;
     display:flex;
     align-items:center;
+    width:99%;
 }
 img{
     max-width:250px;
     max-height:250px;
-    padding: 5px 5px 5px 5px;
+    float:left;
 }
-.energy{
-    max-width:40%;
-    height:250px;
-}
-.buy{
-    max-width:40%;
-    height:250px;
+.item ul {
+    width:17%;
+    height:240px;
+    margin:auto;
+    border: 1px solid black;
 }
 footer{
     background-color: navy;
     color:white;
-    padding: 20px
+    margin:10px;
+}
+.item table {
+    max-width:17%;
+    display:inline;
+    margin:auto;
+
+}
+.item th{
+    background-color:red;
+    color:white;
+}
+.item th, td{
+    text-align:center;
+    padding: 5px;
+    border:1px solid #000000;
+}
+.item tr:nth-child(odd){
+    background-color:#000000;
+    color:#ffffff;
+    overflow:auto;  
+
+}
+.item tr:nth-child(even){
+    background-color:green;
+    color:yellow;
+}
+.item textarea{
+    border: 1px solid #888;
+    width:17%;
+    max-height:200px;
+    margin:auto;
+    text-align:center;
+
+}
+footer{
+    clear:both;
 }

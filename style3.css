@@ -147,3 +147,22 @@ img{
     margin: 1%;
 
 }
+a{
+    text-decoration: none;
+}
+a:link{
+    color: turquoise;
+}
+a:visited{
+    color: magenta;
+
+}
+a:active{
+    color: orangered
+}
+a:hover{
+    color:pink;
+}
+div:hover{
+    background-color:forestgreen;
+}
