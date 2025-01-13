@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viowport" content="width=device-width, initial-scale=1.0">
+        <meta http-0equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="2style.css">
+        <!--<script src="2script.js"></script>-->
+        <title>Event Checker Lesson</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                
+            </nav>
+
+        </header>
+        <section id="content">
+            <div id="output">
+                <h1>Event Checker</h1>
+                <h2 id="change">Check for Evenness</h2>
+                <input type="number" name="myNum" value="4" min="0" max="100">
+                <input type="button" id="testButton">ClickCheck</button>
+            
+        </section>
+        <footer>
+
+        </footer>
+
+        <script>
+            console.log("the Beginning");
+            console.dir(document);
+            const output = document.getElementById('change');
+            console.log(output);
+            const testBtn = document.getElementById('testButton');
+            console.log(testBtn);
+            testBtn.addEventListener('click',checkValue);
+
+            function checkValue(num){
+                let val = document.querySelector('input[name="myNum"]').value;
+                console.log(val);
+                output.innerHTML=numChecker(val);
+            }
+            function numChecker(num){
+                console.log(num);
+                let message='';
+                if(num%2==0){
+                    message="EVEN";
+                }
+                else{
+                    message="ODD"
+                }
+                return message;
+            }
+        </script>
+
+    </body>
+</html>
