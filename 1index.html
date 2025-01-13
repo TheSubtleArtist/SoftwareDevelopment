@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viowport" content="width=device-width, initial-scale=1.0">
+        <meta http-0equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="1style.css">
+        <script src="1script.js"></script>
+        <title>Title</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                
+            </nav>
+
+        </header>
+        <section id="html">
+            <h1>The Javascript Learning Page</h1>
+            <p id="exOneSelect">The Naked Tooth</p>
+        </section>
+        <section id="writeJavascript">
+            <h2>Write Basic Alerts</h2>
+            <button type="button" onclick="alert('hello world 2')">Click Me!</button>
+        </section>
+        <section id="updateHtmlElement">
+            <h2>Update HTML Elements</h2>
+            <script>document.querySelector("h1").innerHTML="Only works after the h1 has been rendered first.";</script>
+        </section>
+        <section id="javascriptVariables">
+            <h2>Javascript Variables</h2>
+            <!--
+            <script>var a1 = 'hello World 3';</script>
+            <script>alert(a1)</script>
+            <script>alert(b1)</script>
+            <script>alert(a1 + " " + b1)</script>
+        -->
+        </section>
+        <section id="exerciseOne">
+            <h2>Exercise One</h2>
+            <script>document.querySelector('#exOneSelect').innerHTML=exOneMessage;</script>
+        </section>
+        <section id="functions">
+            <h2 id="functionHead">Functions</h2>
+            <button type="button" onclick="funMessage('Changed the Text ')">funMessage Button!</button>
+        </section>
+        <section id="objects">
+            <h2>Objects</h2>
+            <p id="person">Placeholder for person</p>
+            <button type="button" onclick="updatePerson()">Update Person</button>
+        </section>
+        <section id="arrays">
+            <h2>Arrays</h2>
+            <script>console.log(arrayOne.length)</script>
+            <script>console.log(arrayOne[1])</script>
+            <script>document.write(arrayOne[2]);</script>
+            <script>document.write(arrayOne);</script>
+            <script>arrayOne.push("position6");</script><br>
+            <script>document.write(arrayOne);</script>
+            <script>arrayOne.push(b1);</script>
+            <br><script>document.write(arrayOne);</script>
+            <script>arrayOne.pop()</script>
+            <br><script>document.write(arrayOne);</script>
+            <script>arrayOne.shift()</script>
+            <br><script>document.write(arrayOne);</script>
+            <script>arrayOne.unshift("unshift_position0")</script>
+            <br><script>document.write(arrayOne);</script><br>
+            <script>document.write("Index of the string: ",arrayOne.indexOf('position2'))</script>
+            <br><script>document.write(arrayOne.sort());</script><br>
+            <br><script>document.write(arrayOne.reverse());</script><br>
+        </section>
+        <section id="conditionals">
+            <h2> Javascript Conditionals</h2>
+            <script>funConditional1(conditional1, conditional2)</script>
+        </section>
+        <section id="switch">
+            <h2>Javascript Switches</h2>
+            <script>funSwitch("three")</script>
+        </section>
+        <section id="loops">
+            <h2>Javascript Loops</h2>
+            <h3>For Loops</h3>
+            <script class="loop" id="forLoop"> for(var x=0;x<10;x++){document.write(x)};</script>
+            <script class="loop" id="arrayLoop"> for(var i=0; i<arrayOne.length; i++){document.write(arrayOne[i],"<br>")};</script>
+            <script class="loop" id="objectLoop"> for (var key in person){document.write(key,": ",person[key], "<br>")};</script>
+            <script class="loop" id="whileLoop">funWhileLoop();</script>
+            <script class="loop" id="doLoop">funDoLoop(2);</script>
+        </section>
+        <section id="stringMethods">
+            <h2>String Methods</h2>
+            <script>funStringMethods(testStringOne)</script>
+            <script>funFindSubString(testStringOne, "is");</script>
+        </section>
+        <section id="letAndConst">
+            <h2>Using Let and Const to declare variables.</h2>
+            <p>Let and Const are ephemeral variables that live only while a block of code is used.</p>
+            <p>will not re-assign the value of a variable in a block to a variable outside the block of code.</p>
+            <p>common when delcaring a variable for use in a loop</p>
+            <script>document.write("for(let x=0;x<10;x++){document.write(xtc)}; ");</script><br>
+            <script class="loop" id="letLoop"> for(let xtc=0;x<10;x++){document.write(xtc,"<br>")};</script>
+            <!--<script>console.log(xtc);</script>-->
+        </section>
+        <section id="theDOM">
+            <h2>The Document Object Model</h2>
+            <p id="domPlaceholder">Placeholder</p>
+            <script>document.write(document.documentURI,"<br>");</script>
+            <input type="text" id="domInput" value="domTest">
+            <button type="button" id="domButton" onclick="funUpdateDomButton()">domClick</button>
+        </section>
+        <section id="eventListeners">
+            <h2>Event Listeners</h2>
+            <h2 id="eventHeader">Some Event Listener stuff</h2>
+            <input type="text" id="eventInput" value="Wacky Tabacky">
+            <button type="button" id="eventButton">ClickHere</button>
+
+            <script>
+                const myClicky =document.querySelector('#eventButton');
+                const myWrity = document.querySelector('#eventHeader');
+                myClicky.addEventListener('click',message)
+            </script>
+
+
+
+        </section>
+        <footer>
+        </footer>
+    </body>
+</html>
