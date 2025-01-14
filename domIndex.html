@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viowport" content="width=device-width, initial-scale=1.0">
+        <meta http-0equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="domStyle.css">
+        <!--<script src="domScript.js"></script>-->
+
+        <title>Title</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                
+            </nav>
+        </header>
+        <section>
+            <h1>Learning about the DOM</h1>
+            <h2 class="class2">Using a Class 2 Header</h2>
+            <h2 class="test">This is the test class.</h2>
+            <div id="anchors">
+                <a href="https://www.amazon.com"><img src="https://unsplash.it/300/200"></a>
+                <a href="https://www.walmart.com"><img src="https://unsplash.it/400/200"></a>
+            </div>
+            <div class="domText">
+                <p style="font-size: 1.5em;">You can <strong style="background-color: #317399; padding: 0 5px; color: #fff;">type your text</strong> directly in the editor or paste it from a Word Doc, PDF, Excel etc.</p>
+                <p style="font-size: 1.5em;">The <strong>visual editor</strong> on the right and the <strong>source editor</strong> on the left are linked together and the changes are reflected in the other one as you type! 
+                <img src="https://html5-editor.net/images/smiley.png" alt="smiley" /></p>
+                <p class="latin" id="one">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                <p class="latin" id="two">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                <p class="latin" id="three">Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                <p class="latin" id="four">Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+            </div>
+            <div class="domTable">
+                <h2>Here's a Table</h2>
+                <table class="editorDemoTable">
+                    <tbody>
+                        <tr>
+                            <td><strong>Name</strong></td>
+                            <td><strong>City</strong></td>
+                            <td><strong>Age</strong></td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Chicago</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>Lucy</td>
+                            <td>Wisconsin</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>Amanda</td>
+                            <td>Madison</td>
+                            <td>22</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="domList">
+                <h2>Unordered List</h2>
+                <ul>
+                    <li class="item">List Item One</li>
+                    <li class="item">List Item Two</li>
+                    <li class="item">List Item Three</li>
+                    <li class="item">List Item Four</li>
+                </ul>
+            </div>
+
+        </section>
+        <footer>
+
+        </footer>
+
+    </body>
+   <script id="domManipulation">
+        console.dir(document);
+        var ele1 = document.querySelector("#one");
+        console.dir(ele1.innerHTML);
+        ele1.innerHTML="This is now changed from Latin."
+        ele1.style.color="red";
+        ele1.style.background='blue';
+    </script>
+    <script id="domSelection">
+        console.log(document.URL)
+        var ele2 = document.getElementById("two");
+        ele2.style.backgroundColor="yellow";
+        ele3 = document.getElementsByTagName("li");
+        console.log(ele3);
+        console.log(ele3.length);
+        var ele4 = document.getElementsByClassName("latin");
+        console.log(ele4);
+        console.log(ele4.length);
+        var ele5 = document.querySelector(".latin");
+        console.log(ele5.length); //does not work because querySelector identifies only the first one.
+        console.log(ele5);
+        var ele6 = document.querySelectorAll(".lating");
+        console.log(ele6.length);
+        console.log(ele6);
+    </script>
+    <script id="textManipulation">
+        console.log("Text Manipulation");
+        var ele7 = document.querySelector('.item');
+        console.log(ele7);
+        console.dir(ele7);
+        console.log(ele7.textContent);
+        ele7.textContent="Change textContent";
+        ele7.innerHTML="Goodbye<br>Cruel<br>World!";
+        console.log(ele7.textContent);
+        console.log("Check out the Outer HTML!");
+        console.log(ele7.outerHTML);
+    </script>
+    <script id="changeClasses">
+        var ele8 = document.querySelector(".class2");
+        console.dir(ele8);
+        ele8.className="red";
+        ele8.classList.add('latin');
+        ele8.classList.add('blue');
+        console.dir(ele8.classList);
+        ele8.classList.toggle('blue');
+        ele8.classList="blue";
+    </script>
+    <script id="changeStyles">
+        var ele9 = document.getElementsByClassName("test");
+        console.log(ele9[0]);
+        var tempEle9=ele9[0];
+        tempEle9.style.backgroundColor="green";
+        tempEle9.style.color="white";
+        tempEle9.style.border="5px dotted purple";
+        tempEle9.style.fontSize="40px";
+        tempEle9.style.display="block";
+    </script>
+    <script id="attributeManipulation">
+        console.log("Attribute Manipulation")
+        ele10 = document.getElementsByTagName('a');
+        console.log("ele10");
+        console.log(ele10[0]);
+        ele11 = document.getElementsByTagName('img');
+        console.log("Ele11");
+        console.log(ele11[1]);
+        var temp10=ele10[0].getAttribute('href');
+        console.log(temp10)
+        ele10[0].setAttribute('href','http://www.yahoo.com')
+    </script>
+    <!--<script id="interactiveDOM">
+        console.log("Interactive DOM")
+        var unorderedList = document.querySelector('ul')
+        unorderedList.addEventListener('click',function(){
+            console.log('click');
+        })
+    </script>-->
+    <script id="selectMultipleElements">
+        var eleList = document.querySelectorAll('li');
+        console.log(eleList);
+        for(let x=0;x<eleList.length;x++){
+            eleList[x].addEventListener('click',function(){
+                console.log(this);
+                let tmp=this.classList.toggle('red');
+                console.log(tmp);
+            })
+        }
+    </script>
+    <script id="keyPressEvents">
+        
+    </script>
+</html>
