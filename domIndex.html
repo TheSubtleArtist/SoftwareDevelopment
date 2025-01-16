@@ -151,7 +151,7 @@
             console.log('click');
         })
     </script>-->
-    <script id="selectMultipleElements">
+    <!--<script id="selectMultipleElements">
         var eleList = document.querySelectorAll('li');
         console.log(eleList);
         for(let x=0;x<eleList.length;x++){
@@ -162,7 +162,150 @@
             })
         }
     </script>
+-->
     <script id="keyPressEvents">
+        document.write("<h1> Key Press Events</h1>");
+        document.write("<input type='text'= name='newItem'>");
+        var keyElement=document.querySelector('input[name="newItem"]');
+        var scriptElement=document.getElementById('keyPressEvents');
+        console.log("Key Element", keyElement);
+        console.log("Script Element: ", scriptElement);
+
+        keyElement.addEventListener('keypress', addItem);
+
+        function addItem(){
+            //console.log('add item');
+            if(event.keyCode === 83){
+                document.write('you pressed S, the secret character');
+                scriptElement.style.backgroundColor="yellow";
+            }
+            else {
+                console.log('you did not press the secret character');
+                scriptElement.style.backgroundColor="red";
+
+            }
+        }
         
+    </script>
+    <script id="mouseEvents">
+        document.write("<h1>Mouse Events");
+
+        var mouseEvents = document.querySelectorAll('li');
+        for(let x=0;x<mouseEvents.length;x++){
+            console.log('mouse event: ', mouseEvents[x]);
+            mouseEvents[x].addEventListener('mouseover', function(){
+                this.classList.toggle('red');
+            })
+        }
+        
+    </script>
+    <!--<script id="CreateOwnElements">
+        document.write("<h1>Create Your Own DOM Elements");
+        document.write("<h2 id='replaceMe'>Some Text to Replace</h2>");
+        document.write("<div id='clicker'>Click Me</div>");
+        var clicker = document.getElementById('clicker');
+        var replace = document.getElementById('replaceMe');
+        var mainList = document.querySelector('ul');
+        clicker.addEventListener('click',function(){
+            console.log('Hello');
+            replace.innerHTML='YOU CLICKED THE DIV';
+
+            var li = document.createElement('li');
+            var allListItems = document.querySelectorAll('li');
+            var textValue = 'tLOOK UP HERE, DUMMY!' + (allListItems.length+1);
+            var tempNode = document.createTextNode(textValue);
+            li.appendChild(tempNode);
+            mainList.appendChild(li);
+
+        })
+
+    </script>-->
+    <!--<script id="addEventsToNewElements">
+        document.write("<h1>Add Event Listeners to New Events");
+        document.write("<h2 id='replaceMe'>Some Text to Replace</h2>");
+        document.write("<div id='clicker'><br><br>Click Me<br><br></div>");
+            var mainList2 = document.querySelector('ul');
+            var clicker2 = document.getElementById('clicker');
+            var allListItems2=document.querySelectorAll('li');
+            for(let x=0;x<allListItems2.length;x++){
+                allListItems2[x].addEventListener('click',myList);
+            }
+
+            function myList(){
+                console.log('click');
+                this.classList.toggle('red');
+
+            }
+            clicker2.addEventListener('click',function(){
+                var li2 = document.createElement('li');
+                li2.addEventListener('click', myList);
+                var textValue2 = 'test2'+(allListItems2.length + 1);
+                var tempNode2 = document.createTextNode(textValue2);
+                li2.appendChild(tempNode2);
+                mainList2.appendChild(li2);
+
+            })
+    </script>-->
+    <script id="CreateDynamicLists">
+        document.write("<h1>Create Dynamic Lists</h1");
+        document.write("<h2 id='replaceMe'>Some Text to Replace</h2>");
+        document.write("<input type='text'id='dynamicInput'>");
+        document.write("<div id='thisClicker'><br><br>Click Me<br><br></div>");
+        document.write("<div id='createDynamicList'> <h2>Unordered List</h2><ul id='dynamicList'><li class='dynamicItem'>List Item One</li><li class='dynamicItem'>List Item Two</li><li class='dynamicItem'>List Item Three</li><li class='dynamicItem'>List Item Four</li></ul></div>")
+        
+        var thisList = document.getElementById('dynamicList');
+        var thisClicker = document.getElementById('thisClicker');
+        var allDynamicItems=document.querySelectorAll('#dynamicItem');
+
+        var inputSelect = document.querySelector('#dynamicInput');
+        inputSelect.addEventListener('keypress', function(event){
+            console.log(event.keyCode);
+            if(event.keyClode === 83){
+            makeNew();
+            console.log(event.keyCode);
+            }
+        })
+
+        for(let x=0;x<allDynamicItems.length;x++){
+            allDynamicItems[x].addEventListener('click', thisListFunction);
+        }
+
+        function thisListFunction(){
+            var temp=this.classList.toggle('red');
+            console.log(temp);
+            if (temp){
+                var span = document.createElement('span');
+                span.textContent="X";
+                span.addEventListener('click', function(){
+                    this.parentElement.remove();
+                })
+                this.appendChild(span);
+            }
+            else{
+                this.getElementsByTagName('span')[0].remove();
+            }
+        }
+
+        thisClicker.addEventListener('click',function(){
+            var thisLI = document.createElement('li');
+            thisLI.addEventListener('click',thisListFunction);
+            console.log("list length: ",allDynamicItems.length)
+            var thisText = 'Dynamo' + (allDynamicItems.length +1 );
+            var thisNode = document.createTextNode(thisText);
+            thisLI.appendChild(thisNode);
+            thisList.appendChild(thisLI);
+        })
+
+        function makeNew(){
+            var thisLI = document.createElement('li');
+            thisLI.addEventListener('click',thisListFunction);
+            console.log("list length: ",allDynamicItems.length);
+            var thisText = inputSelect.value;
+            inputSelect.value = '';
+            var thisNode = document.createTextNode(thisText);
+            thisLI.appendChild(thisNode);
+            thisList.appendChild(thisLI);
+        }
+
     </script>
 </html>
