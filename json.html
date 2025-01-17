@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viowport" content="width=device-width, initial-scale=1.0">
+        <meta http-0equiv="X-UA-Compatible" content="ie=edge">
+        <title>JSON</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                
+            </nav>
+
+        </header>
+        <section id="jsonDetails">
+            <div id="output1">
+
+            </div>
+            <div id="output2">
+
+            </div>
+            <script>
+                document.write('<h1>JSON Details</h1>')
+                var output1 = document.getElementById('output1');
+                var output2= document.getElementById('output2');
+                var myObj= {
+                    "firstName": "John",
+                    "lastName": "Smith",
+                    "age": 25,
+                    "address": { 
+                        "streetAddress": "21 2nd Street",
+                        "city": "New York",
+                        "state": "NY",
+                        "postalCode":"10021"
+                    },
+                    "phoneNumber": [
+                        {"type": "home", "number": "212-555-1234"},
+                        {"type": "fax", "number": "646 555-4567"}
+                    ],
+                    "gender": "male"
+                };
+                console.log(myObj);
+                var name ='Name';
+                output1.innerHTML = myObj.firstName;
+                output2.innerHTML = myObj['last' + name];
+            </script>
+            
+        </section>
+        <section id=" arraysOfObjects">
+            <div id="output3">Output 3</div>
+            <div id="output4">Output 4</div>
+            <script>
+                document.write('<h1>JavaScript Arrays of Objects</h1>');
+                var output3 = document.getElementById('output3');
+                var output4 = document.getElementById('output4');
+                var garage1 = {"car":["blue", "black"]};
+                var garage2 = {"car1":{"color":"blue"}, 
+                            "car2":{"color":"black"}};
+                var garage3 = {"car3":{"color":"blue", "model": "Mustang"}, 
+                            "car4":{"color":"black", "model":"Honda"}};
+
+                var waitingRoom= {
+                    "people":[
+                        {
+                            "firstName": "John",
+                            "lastName": "Smith",
+                            "age": 25,
+                            "address": { 
+                                "streetAddress": "21 2nd Street",
+                                "city": "New York",
+                                "state": "NY",
+                                "postalCode":"10021"
+                            },
+                            "phoneNumber": [
+                                {"type": "home", "number": "212-555-1234"},
+                                {"type": "fax", "number": "646 555-4567"}
+                            ],
+                            "gender": "male"
+                        },
+                        {
+                            "firstName": "Mary",
+                            "lastName": "Smith",
+                            "age": 35,
+                            "address": { 
+                                "streetAddress": "21 2nd Street",
+                                "city": "New York",
+                                "state": "NY",
+                                "postalCode":"10021"
+                            },
+                            "phoneNumber": [
+                                {"type": "home", "number": "212-555-1212"},
+                                {"type": "fax", "number": "646 555-9898"}
+                            ],
+                            "gender": "female"
+                        }   
+                    ],
+                    "places":[
+                        {"location": "Toronto", "lat":87, "long":140},
+                        {"location": "New York", "lat":67, "long":110}
+                    ]
+                };
+                console.log(waitingRoom);
+                output3.innerHTML = waitingRoom.people[0].firstName + " " + waitingRoom.people[0].lastName;
+                output4.innerHTML = waitingRoom.people[1].firstName + " " + waitingRoom.people[1].lastName;
+
+
+           </script>
+        </section>
+        <section id="looping">
+            <div id="output5">Output 5</div>
+            <div id="output6">Output 6</div>
+            <script>
+                document.write('<h1>Looping Through Object Data</h1>');
+                var output5 = document.getElementById('output5');
+                var output5 = document.getElementById('output6');
+                console.log("Start the  Loop")
+                for (let x =0;x<waitingRoom.people.length;x++){
+                    var person = waitingRoom.people[x];
+                    console.log(person);
+                    output5.innerHTML += "<br>" + waitingRoom.people[x].firstName + " " + waitingRoom.people[x].lastName + " from " + waitingRoom.places[x].location;
+                }
+            </script>
+        </section>
+        <section id="addAnObject">
+            <div id="output7"><h3>Output 7</h3></div>
+            <div id="output8"><h3>Output 8</h3></div>
+            <script>
+                document.write('<h1> Adding to Object');
+
+                waitingRoom.people.push({"firstName":"Andrea", "lastName":"Marquis", "age":30, "gender":"female"});
+                for (let x =0;x<waitingRoom.people.length;x++){
+                    var person = waitingRoom.people[x];
+                    console.log(person);
+                    output7.innerHTML += "<br>" + waitingRoom.people[x].firstName + " " + waitingRoom.people[x].lastName;
+                }
+            </script>
+        </section>
+           <!--<section id="jsonMethods">
+                <script>
+                    document.write('<h1> JSON Methods: Fetch');
+                    document.write('<div id="output9"><h3>Output 9</h3></div>')
+                    var output9 = document.getElementById('output9');
+                    //const url = "https://a.4cdn.org/boards.json";
+                    const url = "https://randomuser.me/api";
+                    fetch(url).then(function(response){
+                        return response.json()
+                    }).then(function(data){
+                        console.log(data);
+                        output9.innerHTML=data;
+
+                    })
+                </script>
+        </section>
+    -->
+        <section id="localStorage">
+            <script>
+                document.write('<h1> Local Storage Values');
+                document.write('<div id="output10"><h3>Output 10</h3></div>')
+                var output10 = document.getElementById('output10');
+                var tempString = JSON.stringify(waitingRoom);
+                console.log(tempString);
+                localStorage.setItem('test', tempString);
+                var tempObject = localStorage.getItem('test');
+                var stringToObject = JSON.parse(tempObject);
+                for (let x =0;x<waitingRoom.people.length;x++){
+                    var person = waitingRoom.people[x];
+                    console.log(person);
+                    output10.innerHTML += "<br>" + waitingRoom.people[x].firstName + " " + waitingRoom.people[x].lastName;
+                }
+
+
+            </script>
+        </section>
+        <footer>
+
+        </footer>
+
+    </body>
+</html>

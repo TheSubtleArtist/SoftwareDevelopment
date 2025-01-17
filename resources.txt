@@ -1,0 +1,4 @@
+myjson.com - storage and reference
+jsonlint.com - validation
+randomuser.me - JSON Data API
+randomuser.me/api/?results=10
