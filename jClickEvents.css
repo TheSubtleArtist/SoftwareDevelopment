@@ -1,0 +1,16 @@
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+    color:white;
+
+}
+
+.bold{
+    font-weight:bold;
+}
+.standard{
+    font-weight:normal;
+}

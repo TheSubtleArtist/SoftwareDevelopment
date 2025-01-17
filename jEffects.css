@@ -1,0 +1,24 @@
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+    color:white;
+
+}
+
+.bold{
+    font-weight:bold;
+}
+.standard{
+    font-weight:normal;
+}
+
+.effectsHeader{
+    position:absolute;
+    width:200px;
+    border: 1px solid purple;
+    padding: 25px;
+    margin: 10px;
+}
