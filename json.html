@@ -168,7 +168,55 @@
                     console.log(person);
                     output10.innerHTML += "<br>" + waitingRoom.people[x].firstName + " " + waitingRoom.people[x].lastName;
                 }
-
+            </script>
+        </section>
+        <section id="javascriptFetch">
+            <script>
+                document.write('<h1> JSON Fetch</h1>');
+                document.write('<div id="output11"><h3>Output 11</h3></div>')
+                var output11 = document.getElementById('output11');
+                const url = "https://randomuser.me/api";
+                    fetch(url).then(function(response){
+                        return response.json()
+                    }).then(function(data){
+                        console.log('The Results')
+                        console.log(data.results[0]);
+                        let person = data.results[0];
+                        output11.innerHTML = person.name.first +", "+person.name.last;
+                    })
+            </script>
+        </section>
+        <section id="errorHandlingShorthand">
+            <script>
+                document.write('<h1> Shorthand Error Handling</h1>');
+                document.write('<div id="output12"><h3>Output 12</h3></div>')
+                var output12 = document.getElementById('output12');
+                //const url = "https://randomuser.me/api";
+                fetch(url).then(response => {
+                    return response.json();
+                }).then(data => {
+                    console.log(data);
+                }).catch(error =>{
+                    console.log(error);
+                })
+            </script>
+        
+        </section>
+        <section id="jsonForEach">
+            <script>
+                document.write('<h1> JSON ForEach</h1>');
+                document.write('<div id="output13"><h3>Output 13</h3></div>')
+                var output13 = document.getElementById('output13');
+                const urlThirteen = "https://randomuser.me/api/?results=5";
+                fetch(urlThirteen).then(function(response){
+                    return response.json()
+                }).then(function(data){
+                    data.results.forEach(function(person){
+                        console.log(person);
+                        output13.innerHTML += "<br>" + "<img src='"+person.picture.thumbnail + "''>"+" "+person.name.title + " " + person.name.last +", "+person.name.first;
+                    })
+                    console.log(data);
+                })
 
             </script>
         </section>
