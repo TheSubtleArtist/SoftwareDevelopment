@@ -1,7 +1,0 @@
-"Fail Secure"
-Least Privilege
-Separation of Duties - Critical functionality divided 
-Defense in Depth
-Avoid Security By Obscurity
-Keep Security Simple
-Fix Security Issues Properly
