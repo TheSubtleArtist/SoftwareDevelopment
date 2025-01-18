@@ -1,0 +1,4 @@
+Checklists makde sure not essential steps are overlooked
+Automation enable rapid, correct deployment
+Continuous integration and deployment 
+Monitoring deployment processes and prdouction code for potential configuration errors and vulnerabilities
