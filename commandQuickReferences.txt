@@ -7,3 +7,17 @@ cat <directory>/.git/description
 ls -l  <directory>/.git/hooks
 git status 
 echo <filename> > ignorable.file // files that regularly changed but developer wanst the file untracked
+git merge <branch to merge to main> -m "Comment"
+git tag
+git fetch
+git stash
+
+git cherry-pick <commit number> (duplicate the commit from one branch to another by moving to the destination branch and executing the command)
+
+
+squashing
+
+git merge <branch> --squash 
+
+git rebase <target branch> (rebases from current active branch onto the target branch)
+

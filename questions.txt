@@ -1,0 +1,79 @@
+Chapter 1: 
+
+ A commit is a database of changes. 
+ A: false
+
+  Which one of these is not a type of Version Control System? 
+  A: Automatic
+
+   How do version control systems help with collaboration? 
+   A: They take care of confflict prevention and resolution
+
+
+
+Chapter 2
+
+ What options should we provide to git commit to visualize the place where all our current configuration parameters are stored? 
+ A: --get --show-origin
+
+  git init with no arguments will put the project’s database in the current folder. 
+  A:  False
+
+   Which one of these parameters is not mandatory for Git to work? 
+   A: None of the Above
+
+
+Chapter 3
+
+  When you merge a branch called experiment into the branch main, what happens to the experiment branch? 
+It suffers no changes at all.
+
+
+ git checkout -b newbranch will fail if you already have a branch called newbranch in your repository.
+ A: True
+
+   Which one of these things doesn’t happen when you create a commit if your current branch is dev and its HEAD is pointing towards a1b2c3d4? 
+The branch description for dev is updated to match the new commit message.
+
+
+Chapter 4
+What is the correct syntax for deleteing branch "bad-branch" on origin (the remote reposity)?
+A: git push --delete origin bad-branch
+
+ If a local branch is set to track a remote branch, once a commit is added to the local branch, it’s also added to the remote branch. 
+ A: true
+
+  Which of these things happens when you clone a repository? 
+  A: All of the above
+
+   Which one of these things doesn’t happen when you create a commit if your current branch is dev and its HEAD is pointing towards a1b2c3d4? 
+   A: None of the above
+
+
+
+Chapter 5
+
+ What’s the default strategy for merging multiple branches with Git? 
+ A: Octopuss
+
+  What’s the difference between -Srecursive -Xours and -Sours? 
+  A: Using ours with the recursive strategy will pick the current version of the changes where there are conflicts, while the “ours” strategy will just drop everything coming from the branches to be merged, be that a conflict or not.
+
+ What commands can cause conflicts that you need to solve manually? 
+ A: Merge, Pull, and Rebase
+
+
+Chapter 6
+
+ How many commits at a time can you change with git commit --amend? 
+A: One - The last one
+
+ How can you create a new empty commit using git cherry-pick? 
+A: Using --keep-redundant-commits and applying a commit that makes no changes
+
+ How many commits at a time can you revert with git revert? 
+A: As many as you want
+
+
+
+
