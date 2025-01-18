@@ -1,0 +1,9 @@
+git config --global user.name
+git config --global user.email
+git config --list --show-origin (show all configuration items)
+tree <directory>/.git
+cat <directory>/.git/config
+cat <directory>/.git/description
+ls -l  <directory>/.git/hooks
+git status 
+echo <filename> > ignorable.file // files that regularly changed but developer wanst the file untracked
