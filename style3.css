@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+header{
+    background-color: greenyellow;
+    font-weight: 500
+}
+body{
+    background-image:url("images/rias.jpg");
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-attachment:fixed;
+}
+/*
+span{
+    display:inline-block
+}
+    */
+li{
+    display:inline-block;
+
+    width:100px;
+    height:100px;
+    font-size: 2em;
+}
+nav{
+    visibility:visible;
+    background-color: brown;
+}
+#testicles{color:magenta; font-size:20px} /* element id's can be called only once for a particular instance*/
+.first{color:rgb(112, 216, 202); font-size:32px}
+.second{color:#44cc90; font-size:24px}
+.third{color:skyblue}
+.titty{font-size:38px}
+.inner{background-color:blue; color:red}
+.outer{background-image:url("images/JobSucks.jpg"); background-repeat:repeat-x; background-position:top left}
+span.ingredient{
+    display:inline; 
+    color:red; 
+    background:yellow}
+.textLeft{
+    text-align: left;
+}
+.textJustify{
+    text-align:justify;
+}
+.textRight{
+    text-align:right;
+}
+.textCenter{
+    text-align:center;
+}
+.fourteen {
+    font-family:fantasy;
+}
+
+.googlefont{
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: oblique;
+    color: tomato
+}
+img{
+    max-width:100%;
+
+}
+#big{
+    float:left;
+}
+#small1{
+    float:inline-end;
+}
+#small2{
+    float:inline-start;
+}
+
+.container div{
+    border: 1px solid blue;
+    width: 100px;
+    height: 70px;
+    float:left;
+}
+.box4{
+    border: 1px solid red;
+    width: 150px;
+    height:50px;
+    clear:both;
+}
+.boxModel{
+    border: 5px solid green;
+    border-bottom: 5px solid orange;
+    padding: top 5px;
+    padding: bottom 10px;
+    padding: left 15px;
+    padding: right 20px;
+    max-width: 50%;
+}
+.boxModel div{
+    border: 2px solid blue;
+    padding: top 5px;
+    padding: bottom 10px;
+    padding: left 15px;
+    padding: right 20px;
+}
+#box13{
+    outline-style: dashed;
+    outline-color: red;
+    outline-width:thick;
+    border: 5px solid blue;
+    margin: 5px;
+}
+#box14{
+    outline-style: groove;
+    border: 5px solid yellow;
+}
+.positioning div{
+    border: 1px solid blue;
+    width: 300px;
+    height: 300px;
+
+}
+.positioning #container{
+    position: absolute;
+    left: 250px;   
+    top: 150px;
+}
+#box19 {
+    position: absolute;
+    background-color:red;
+    right: 50px;
+    top: 50px;
+}
+#box22{
+    position:fixed;
+    background-color: blue;
+    left:50px;
+    top:50px;
+}
+#box23{
+    background-color: green;
+    position: relative;
+    left:100px;
+    top:100px
+}
+
+.imageGrid img{
+    width: 29%;
+    float:left;
+    margin: 1%;
+
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: turquoise;
+}
+a:visited{
+    color: magenta;
+
+}
+a:active{
+    color: orangered
+}
+a:hover{
+    color:pink;
+}
+div:hover{
+    background-color:forestgreen;
+}

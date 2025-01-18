@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viowport" content="width=device-width, initial-scale=1.0">
+        <meta http-0equiv="X-UA-Compatible" content="ie=edge">
+        <title>Contact</title>
+    </head>
+    <body>
+        <header>
+            <h1>My First Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index3.html">Index3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <!--Content Area-->
+            <form>
+                <fieldset>
+                    <legend>Message:</legend>
+                    <div>
+                        <label for="userName3">Name:</label>
+                        <input type="text" name="userName3" id="userName3" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email3">Email:</label>
+                        <input type="email3" name="email" id="email3" placeholder="Email Address">
+                    </div>
+                    <div>
+                        <label id="dropDown" for="subject">Subject:</label>
+                        <select name="subject">
+                            <option value="HR">Human Resources</option>
+                            <option value="BD">Business Development</option>
+                            <option value="OPS">Business Operations</option>
+                            <option value="LG">Logistics</option>
+                            <option value="PA">Public Affairs</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message">Message:</lable><br>
+                        <textarea id="message4" name="message" rows="4" cols="40" maxlength="100">Some Default Text</textarea><br>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="radioButton">Gender:</label><br>
+                    <label for="male">Male: </label>
+                    <input id="male" type="radio" name="radioButton" value="male">
+                    <label for="female">Female:</label>
+                    <input id="female" type="radio" name="radioButton" value="female">
+                    <label for="mental">Mentally Ill:</label>
+                    <input id="mental" type="radio" name="radioButton" value="mental">
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Who is your favorite monster?</legend>
+                        <label for="cthulu">Cthulu </label>
+                        <input id="cthulu" type="radio" name="radioButton" value="cthulu">
+                        <label for="godzilla">Godzilla</label>
+                        <input id="godzilla" type="radio" name="radioButton" value="godzilla">
+                        <label for="kaiju">Kaiju</label>
+                        <input id="kaiju" type="radio" name="radioButton" value="kaiju">
+                    </fieldset>
+                </div>
+                <div>
+                    <label for="terms">Agree to Terms and Conditions:</label>
+                    <input type="checkbox" name="terms" value="agree" checked><br>
+                </div>
+                <button type="submit">Post Message</button>
+            </form>
+        </section>
+        <footer>
+            <!--Copyright Information-->
+            &copy; My website
+        </footer>
+
+    </body>
+</html>
