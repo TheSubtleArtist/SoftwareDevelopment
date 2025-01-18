@@ -38,6 +38,6 @@ public class RaceConditionCorrected {
         t2.start();
         t1.join();
         t2.join();
-        System.out.println("The total is "+t1.getTotal());
+        System.out.println("The total is "+ t1.getTotal());
     }
 }
