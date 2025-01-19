@@ -21,3 +21,37 @@ git merge <branch> --squash
 
 git rebase <target branch> (rebases from current active branch onto the target branch)
 
+
+git ls 
+
+git mv
+
+git rm
+
+git clean
+
+git archive
+
+git count-objects
+
+git gc (garbage collection)
+
+ls .git/hooks
+
+git diff
+
+git diff <filename>
+
+git diff <branch> <branch>
+
+git log
+
+git log <filename>
+
+git blame
+
+git bisect
+
+
+
+

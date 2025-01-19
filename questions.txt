@@ -74,6 +74,34 @@ A: Using --keep-redundant-commits and applying a commit that makes no changes
  How many commits at a time can you revert with git revert? 
 A: As many as you want
 
+chapter 7
 
+ What command should you use if you want to move one or more git-tracked files in your repository without altering the non-tracked ones? 
+A: git mv
 
+ What does git prune remove? 
+ A: Detached commits that have expired
 
+What happens if you run git clean on your repository? 
+A: It raises an error
+
+Chapter 8
+
+What option shows only merges in the git log? 
+A: merges
+
+ Which one of the following options is invalid for --diff-filter? 
+ A: MORTAL
+
+ What’s the default algorithm used by git diff? 
+ A: myers
+
+chapter 9 
+  Which users can use SSH URLs to clone repos from GitHub? 
+  A: Users with push access to the repository
+
+   What options are available for pull request merging by default? 
+   A: merge, squash, and rebase
+
+here do you need to put the yaml config files for GitHub to use them as CI configuration? 
+A: In .github/workflows/
