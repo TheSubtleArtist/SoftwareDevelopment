@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from './Button';
+import Button from './Button.';
 import "./style.css";
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       current: '0',
       previous: [],
+      
       nextIsReset: false
     }
   }
