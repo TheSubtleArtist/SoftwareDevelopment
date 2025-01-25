@@ -1,0 +1,10 @@
+ What is a React component? 
+A reusable piece of UI
+
+
+ What does the React lifecycle refer to? 
+ The various stages of a component's existence
+
+
+  Which of the following manages the internal data of a React component? 
+  State
